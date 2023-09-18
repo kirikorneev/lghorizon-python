@@ -440,7 +440,7 @@ class LGHorizonApi:
 
     def get_recording_show(self, showId:str) -> list[LGHorizonRecordingSingle]:
         _logger.info("Retrieving show recordings...")
-        show_recording_content = self._do_api_call(f"{self._country_settings['api_url']}/eng/web/recording-service/customers/{self._auth.householdId}/episodes/shows/{showId}?source=recording&language=nl&sort=time&sortOrder=asc")
+        show_recording_content = self._do_api_call(f"{self._country_settings['api_url']}/eng/web/recording-service/customers/{self._auth.householdId}/episodes/shows/{showId}?source=recording&language=nl&sort=time&sortOrder=asc&offset=0&limit=100")
         recordings = []
         for item in show_recording_content["data"]:
             if item['source'] == 'show':

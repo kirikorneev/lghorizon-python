@@ -233,7 +233,7 @@ class LGHorizonRecordingEpisode:
         if "poster" in recording_json:
             self.image = recording_json["poster"]["url"]
         if "startTime" in recording_json:
-            self.image = recording_json["startTime"]
+            self.startTime = recording_json["startTime"]
 
 class LGHorizonRecordingShow:
     """Represents a single recording."""
@@ -258,7 +258,7 @@ class LGHorizonRecordingShow:
         if "poster" in recording_json:
             self.image = recording_json["poster"]["url"]
         if "startTime" in recording_json:
-            self.image = recording_json["startTime"]
+            self.startTime = recording_json["startTime"]
 
 
 class LGHorizonRecordingListSeasonShow(LGHorizonBaseRecording):
